@@ -1,9 +1,10 @@
 'use strict';
 
 const IMG_URL = 'https://image.tmdb.org/t/p/w185_and_h278_bestv2',
-	leftMenu = document.querySelector('.left-menu'),
+	API_KEY = '72986c57d18bff71fb41c90d085b5976';
+
+const leftMenu = document.querySelector('.left-menu'),
 	hamburger = document.querySelector('.hamburger'),
-	// tvCardImage = document.querySelectorAll('.tv-card__img'),
 	tvShowList = document.querySelector('.tv-shows__list'),
 	modal = document.querySelector('.modal');
 
@@ -70,18 +71,6 @@ leftMenu.addEventListener('click', (e) => {
 });
 
 // change card image
-
-// tvCardImage.forEach((e) => {
-// 	const src = e.src;
-// 	if (e.dataset.backdrop) {
-// 		e.addEventListener('mouseover', () => {
-// 			e.src = e.dataset.backdrop;
-// 		});
-// 		e.addEventListener('mouseout', () => {
-// 			e.src = src;
-// 		});
-// 	}
-// });
 
 const changeImage = (e) => {
 	const card = e.target.closest('.tv-shows__item');
